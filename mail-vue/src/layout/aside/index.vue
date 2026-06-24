@@ -94,7 +94,7 @@ const route = useRoute();
   justify-content: center;
   gap: 5px;
   color: #ffffff;
-  background: linear-gradient(135deg, #1890ff, #3a80dd);
+  background: linear-gradient(135deg, #8b5cf6, #f59e0b);
   transition: all 0.3s ease;
   max-width: 240px;
   padding: 0 10px;
@@ -136,13 +136,13 @@ const route = useRoute();
 
 .choose-item {
   font-weight: bold;
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(139, 92, 246, 0.15) !important;
   backdrop-filter: blur(4px);
 }
 
 @media (hover: hover) {
   .el-menu-item:hover {
-    background: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(139, 92, 246, 0.1) !important;
   }
 }
 

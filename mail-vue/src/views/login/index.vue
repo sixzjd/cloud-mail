@@ -140,8 +140,8 @@
         </el-button>
       </div>
     </el-dialog>
-    <a v-show="settingStore.settings.projectLink" class="github" href="https://github.com/maillab/cloud-mail">
-      <Icon icon="mingcute:github-line" color="#1890ff" width="20" height="20" />
+    <a v-show="settingStore.settings.projectLink" class="github" href="https://github.com/sixzjd/cloud-mail">
+      <Icon icon="mingcute:github-line" color="#a78bfa" width="20" height="20" />
     </a>
   </div>
 </template>
@@ -617,7 +617,8 @@ function submitRegister() {
 }
 
 .container {
-  background: v-bind(loginOpacity);
+  background: rgba(17, 0, 34, 0.85);
+  backdrop-filter: blur(20px);
   padding-left: 40px;
   padding-right: 40px;
   display: flex;
@@ -625,38 +626,50 @@ function submitRegister() {
   justify-content: center;
   width: 450px;
   height: 100%;
-  border-left: 1px solid var(--login-border);
-  box-shadow: var(--el-box-shadow-light);
+  border-left: 1px solid rgba(139, 92, 246, 0.15);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
   @media (max-width: 1024px) {
     padding: 20px 18px;
     width: 384px;
     margin-left: 18px;
   }
   @media (max-width: 767px) {
-    border: 1px solid var(--login-border);
+    border: 1px solid rgba(139, 92, 246, 0.15);
     padding: 20px 18px;
-    border-radius: 6px;
+    border-radius: 12px;
     height: fit-content;
     width: 100%;
     margin-right: 18px;
     margin-left: 18px;
+    background: rgba(17, 0, 34, 0.9);
   }
 
   .btn {
     height: 36px;
     width: 100%;
     border-radius: 6px;
+    background: linear-gradient(135deg, #8b5cf6, #f59e0b) !important;
+    border: none !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: linear-gradient(135deg, #7c3aed, #d97706) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
   }
 
   .form-desc {
     margin-top: 5px;
     margin-bottom: 18px;
-    color: var(--form-desc-color);
+    color: #9f8fc0;
   }
 
   .form-title {
     font-weight: bold;
     font-size: 22px !important;
+    color: #e8dff5;
   }
 
   .switch {
@@ -664,19 +677,29 @@ function submitRegister() {
     text-align: center;
 
     span {
-      color: var(--login-switch-color);
+      color: #a78bfa;
       cursor: pointer;
     }
   }
 
   :deep(.el-input__wrapper) {
     border-radius: 6px;
-    background: var(--el-bg-color);
+    background: rgba(26, 10, 46, 0.8);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    box-shadow: none !important;
+  }
+
+  :deep(.el-input__wrapper:focus-within) {
+    border-color: rgba(139, 92, 246, 0.4) !important;
+  }
+
+  :deep(.el-input__inner) {
+    color: #e8dff5 !important;
   }
 
   .email-input :deep(.el-input__wrapper) {
     border-radius: 6px 0 0 6px;
-    background: var(--el-bg-color);
+    background: rgba(26, 10, 46, 0.8);
   }
 
   .el-input {
@@ -722,21 +745,30 @@ function submitRegister() {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: var(--el-bg-color);
+  background: rgba(26, 10, 46, 0.8);
+  backdrop-filter: blur(10px);
   bottom: 10px;
   right: 10px;
   z-index: 1000;
-  border: 1px solid var(--el-border-color-light);
-  box-shadow: var(--el-box-shadow-light);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.github:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
 }
 
 :deep(.el-input-group__append) {
   padding: 0 !important;
   padding-left: 8px !important;
   padding-right: 4px !important;
-  background: var(--el-bg-color);
+  background: rgba(26, 10, 46, 0.8);
   border-radius: 0 8px 8px 0;
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  border-left: none;
 }
 
 :deep(.el-button+.el-button) {
@@ -766,7 +798,7 @@ function submitRegister() {
 
 
 #login-box {
-  background: linear-gradient(to bottom, #2980b9, #6dd5fa, #fff);
+  background: linear-gradient(135deg, #0c0015 0%, #1a0a2e 30%, #110022 60%, #0c0015 100%);
   font: 100% Arial, sans-serif;
   height: 100%;
   margin: 0;
@@ -774,6 +806,21 @@ function submitRegister() {
   overflow-x: hidden;
   display: grid;
   grid-template-columns: 1fr;
+  position: relative;
+}
+
+#login-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at 20% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 50%),
+              radial-gradient(ellipse at 60% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 50%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 
@@ -818,36 +865,32 @@ function submitRegister() {
 }
 
 .cloud {
-  background: linear-gradient(to bottom, #fff 5%, #f1f1f1 100%);
-  border-radius: 100px;
-  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-  height: 120px;
-  width: 350px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.03) 70%, transparent 100%);
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
   position: relative;
+  filter: blur(40px);
 }
 
 .cloud:after,
 .cloud:before {
   content: "";
   position: absolute;
-  background: #fff;
+  background: transparent;
   z-index: -1;
 }
 
 .cloud:after {
-  border-radius: 100px;
-  height: 100px;
-  left: 50px;
-  top: -50px;
-  width: 100px;
+  border-radius: 50%;
+  height: 0;
+  width: 0;
 }
 
 .cloud:before {
-  border-radius: 200px;
-  height: 180px;
-  width: 180px;
-  right: 50px;
-  top: -90px;
+  border-radius: 50%;
+  height: 0;
+  width: 0;
 }
 
 </style>
