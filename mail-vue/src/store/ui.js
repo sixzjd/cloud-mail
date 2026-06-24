@@ -1,5 +1,7 @@
 import { defineStore } from 'pinia'
 
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
 export const useUiStore = defineStore('ui', {
     state: () => ({
         asideShow: window.innerWidth > 1024,
@@ -10,7 +12,7 @@ export const useUiStore = defineStore('ui', {
         changePreview: 0,
         previewData: {},
         key: 0,
-        dark: false,
+        dark: prefersDark,
         asideCount: {
             email: 0,
             send: 0,

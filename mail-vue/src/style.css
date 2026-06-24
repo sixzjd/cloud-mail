@@ -128,7 +128,7 @@ button, input, select, textarea {
     --choose-account-background: var(--el-color-primary-light-8);
     --el-text-color-regular: var(--el-text-color-primary);
     --email-scroll-content-color: rgba(25, 41, 59, 0.4);
-    --email-hover-background: #F2F6FC;
+    --email-hover-background: #F5F0FF;
     --login-border: none;
     --form-desc-color: #71717a;
     --login-switch-color: #8b5cf6;
@@ -143,6 +143,7 @@ button, input, select, textarea {
     --vt-easing: ease-out;
     --gradient-accent: linear-gradient(135deg, #8b5cf6, #f59e0b);
     --gradient-accent-hover: linear-gradient(135deg, #7c3aed, #d97706);
+    --email-right-checked-bg: #FDF6EC;
 }
 
 .dark {
@@ -172,6 +173,7 @@ button, input, select, textarea {
     --el-bg-color-overlay: #1a0a2e !important;
     --el-text-color-primary: #e8dff5 !important;
     --el-fill-color-blank: #110022 !important;
+    --email-right-checked-bg: rgba(139, 92, 246, 0.1);
 }
 
 .el-input {
