@@ -118,7 +118,7 @@ button, input, select, textarea {
     --light-ill: #F5F7FA;
     --light-border: #E4E7ED;
     --header-actions-border: inset 0 -1px 0 0 var(--el-border-color-lighter);
-    --aside-backgound: #0c0015;
+    --aside-backgound: #F5F0FF;
     --loadding-background: rgba(255, 255, 255, 0.8);
     --dark-border: #CDD0D6;
     --base-fill: #F0F2F5;
@@ -135,6 +135,8 @@ button, input, select, textarea {
     --scrollbar-track-color: #A8ABB2;
     --base-border-color: #DCDFE6;
     --secondary-text-color: #909399;
+    --aside-text-color: #4a3560;
+    --aside-title-text: #ffffff;
     --message-block-color: rgba(0, 0, 0, 0);
     --loading-hide-transition: all 200ms;
     --vt-x: 50%;
@@ -144,6 +146,18 @@ button, input, select, textarea {
     --gradient-accent: linear-gradient(135deg, #8b5cf6, #f59e0b);
     --gradient-accent-hover: linear-gradient(135deg, #7c3aed, #d97706);
     --email-right-checked-bg: #FDF6EC;
+    --login-bg-from: #f5f3ff;
+    --login-bg-to: #ede9fe;
+    --login-bg-mid: #faf5ff;
+    --login-glow-1: rgba(139, 92, 246, 0.06);
+    --login-glow-2: rgba(245, 158, 11, 0.04);
+    --login-glow-3: rgba(139, 92, 246, 0.05);
+    --login-form-bg: rgba(255, 255, 255, 0.85);
+    --login-form-bg-mobile: rgba(255, 255, 255, 0.9);
+    --login-form-border: rgba(139, 92, 246, 0.15);
+    --login-form-shadow: -10px 0 40px rgba(139, 92, 246, 0.08);
+    --login-input-bg: rgba(255, 255, 255, 0.8);
+    --login-input-border: rgba(139, 92, 246, 0.15);
 }
 
 .dark {
@@ -167,13 +181,29 @@ button, input, select, textarea {
     --scrollbar-track-color: #5b4a7a;
     --base-border-color: #2d1b4e;
     --secondary-text-color: #9f8fc0;
+    --aside-text-color: #e8dff5;
+    --aside-title-text: #ffffff;
     --message-block-color: rgba(20, 10, 40, 0.2);
+    --el-color-primary-light-9: #1f0e38;
+    --el-color-primary-light-7: #2d1b4e;
     --el-border-color: #2d1b4e !important;
     --el-bg-color: #110022 !important;
     --el-bg-color-overlay: #1a0a2e !important;
     --el-text-color-primary: #e8dff5 !important;
     --el-fill-color-blank: #110022 !important;
     --email-right-checked-bg: rgba(139, 92, 246, 0.1);
+    --login-bg-from: #0c0015;
+    --login-bg-to: #1a0a2e;
+    --login-bg-mid: #110022;
+    --login-glow-1: rgba(139, 92, 246, 0.08);
+    --login-glow-2: rgba(245, 158, 11, 0.05);
+    --login-glow-3: rgba(139, 92, 246, 0.06);
+    --login-form-bg: rgba(17, 0, 34, 0.85);
+    --login-form-bg-mobile: rgba(17, 0, 34, 0.9);
+    --login-form-border: rgba(139, 92, 246, 0.15);
+    --login-form-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    --login-input-bg: rgba(26, 10, 46, 0.8);
+    --login-input-border: rgba(139, 92, 246, 0.1);
 }
 
 .el-input {

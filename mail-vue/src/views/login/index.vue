@@ -67,7 +67,7 @@
                       :value="item"
                   />
                 </el-select>
-                <div style="color: #e8dff5">
+                <div style="color: var(--el-text-color-primary)">
                   <span>{{ suffix }}</span>
                   <Icon class="setting-icon" icon="mingcute:down-small-fill" width="20" height="20"/>
                 </div>
@@ -124,7 +124,7 @@
                     :value="item"
                 />
               </el-select>
-              <div style="color: #e8dff5">
+              <div style="color: var(--el-text-color-primary)">
                 <span>{{ suffix }}</span>
                 <Icon class="setting-icon" icon="mingcute:down-small-fill" width="20" height="20"/>
               </div>
@@ -617,7 +617,7 @@ function submitRegister() {
 }
 
 .container {
-  background: rgba(17, 0, 34, 0.85);
+  background: var(--login-form-bg, rgba(17, 0, 34, 0.85));
   backdrop-filter: blur(20px);
   padding-left: 40px;
   padding-right: 40px;
@@ -626,22 +626,22 @@ function submitRegister() {
   justify-content: center;
   width: 450px;
   height: 100%;
-  border-left: 1px solid rgba(139, 92, 246, 0.15);
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+  border-left: 1px solid var(--login-form-border, rgba(139, 92, 246, 0.15));
+  box-shadow: var(--login-form-shadow, -10px 0 40px rgba(0, 0, 0, 0.3));
   @media (max-width: 1024px) {
     padding: 20px 18px;
     width: 384px;
     margin-left: 18px;
   }
   @media (max-width: 767px) {
-    border: 1px solid rgba(139, 92, 246, 0.15);
+    border: 1px solid var(--login-form-border, rgba(139, 92, 246, 0.15));
     padding: 20px 18px;
     border-radius: 12px;
     height: fit-content;
     width: 100%;
     margin-right: 18px;
     margin-left: 18px;
-    background: rgba(17, 0, 34, 0.9);
+    background: var(--login-form-bg-mobile, rgba(17, 0, 34, 0.9));
   }
 
   .btn {
@@ -663,30 +663,30 @@ function submitRegister() {
   .form-desc {
     margin-top: 5px;
     margin-bottom: 18px;
-    color: #9f8fc0;
+    color: var(--form-desc-color);
   }
 
   .form-title {
     font-weight: bold;
     font-size: 22px !important;
-    color: #e8dff5;
+    color: var(--el-text-color-primary);
   }
 
   .switch {
     margin-top: 20px;
     text-align: center;
-    color: #9f8fc0;
+    color: var(--secondary-text-color);
 
     span {
-      color: #a78bfa;
+      color: var(--login-switch-color);
       cursor: pointer;
     }
   }
 
   :deep(.el-input__wrapper) {
     border-radius: 6px;
-    background: rgba(26, 10, 46, 0.8);
-    border: 1px solid rgba(139, 92, 246, 0.1);
+    background: var(--login-input-bg, rgba(26, 10, 46, 0.8));
+    border: 1px solid var(--login-input-border, rgba(139, 92, 246, 0.1));
     box-shadow: none !important;
   }
 
@@ -695,12 +695,12 @@ function submitRegister() {
   }
 
   :deep(.el-input__inner) {
-    color: #e8dff5 !important;
+    color: var(--el-text-color-primary) !important;
   }
 
   .email-input :deep(.el-input__wrapper) {
     border-radius: 6px 0 0 6px;
-    background: rgba(26, 10, 46, 0.8);
+    background: var(--login-input-bg, rgba(26, 10, 46, 0.8));
   }
 
   .el-input {
@@ -746,13 +746,13 @@ function submitRegister() {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: rgba(26, 10, 46, 0.8);
+  background: var(--login-input-bg, rgba(26, 10, 46, 0.8));
   backdrop-filter: blur(10px);
   bottom: 10px;
   right: 10px;
   z-index: 1000;
-  border: 1px solid rgba(139, 92, 246, 0.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--login-input-border, rgba(139, 92, 246, 0.2));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -766,15 +766,15 @@ function submitRegister() {
   padding: 0 !important;
   padding-left: 8px !important;
   padding-right: 4px !important;
-  background: rgba(26, 10, 46, 0.8) !important;
+  background: var(--login-input-bg, rgba(26, 10, 46, 0.8)) !important;
   border-radius: 0 8px 8px 0;
-  border: 1px solid rgba(139, 92, 246, 0.1);
+  border: 1px solid var(--login-input-border, rgba(139, 92, 246, 0.1));
   border-left: none;
-  color: #e8dff5 !important;
+  color: var(--el-text-color-primary) !important;
 }
 
 :deep(.el-input-group__append span) {
-  color: #e8dff5 !important;
+  color: var(--el-text-color-primary) !important;
 }
 
 :deep(.el-button+.el-button) {
@@ -804,7 +804,7 @@ function submitRegister() {
 
 
 #login-box {
-  background: linear-gradient(135deg, #0c0015 0%, #1a0a2e 30%, #110022 60%, #0c0015 100%);
+  background: linear-gradient(135deg, var(--login-bg-from, #0c0015) 0%, var(--login-bg-to, #1a0a2e) 30%, var(--login-bg-mid, #110022) 60%, var(--login-bg-from, #0c0015) 100%);
   font: 100% Arial, sans-serif;
   height: 100%;
   margin: 0;
@@ -822,9 +822,9 @@ function submitRegister() {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(ellipse at 20% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-              radial-gradient(ellipse at 80% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 50%),
-              radial-gradient(ellipse at 60% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 20% 50%, var(--login-glow-1, rgba(139, 92, 246, 0.08)) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, var(--login-glow-2, rgba(245, 158, 11, 0.05)) 0%, transparent 50%),
+              radial-gradient(ellipse at 60% 80%, var(--login-glow-3, rgba(139, 92, 246, 0.06)) 0%, transparent 50%);
   z-index: 0;
   pointer-events: none;
 }
