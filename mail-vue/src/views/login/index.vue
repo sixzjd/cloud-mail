@@ -67,7 +67,7 @@
                       :value="item"
                   />
                 </el-select>
-                <div>
+                <div style="color: #e8dff5">
                   <span>{{ suffix }}</span>
                   <Icon class="setting-icon" icon="mingcute:down-small-fill" width="20" height="20"/>
                 </div>
@@ -124,7 +124,7 @@
                     :value="item"
                 />
               </el-select>
-              <div>
+              <div style="color: #e8dff5">
                 <span>{{ suffix }}</span>
                 <Icon class="setting-icon" icon="mingcute:down-small-fill" width="20" height="20"/>
               </div>
@@ -675,6 +675,7 @@ function submitRegister() {
   .switch {
     margin-top: 20px;
     text-align: center;
+    color: #9f8fc0;
 
     span {
       color: #a78bfa;
@@ -765,10 +766,15 @@ function submitRegister() {
   padding: 0 !important;
   padding-left: 8px !important;
   padding-right: 4px !important;
-  background: rgba(26, 10, 46, 0.8);
+  background: rgba(26, 10, 46, 0.8) !important;
   border-radius: 0 8px 8px 0;
   border: 1px solid rgba(139, 92, 246, 0.1);
   border-left: none;
+  color: #e8dff5 !important;
+}
+
+:deep(.el-input-group__append span) {
+  color: #e8dff5 !important;
 }
 
 :deep(.el-button+.el-button) {

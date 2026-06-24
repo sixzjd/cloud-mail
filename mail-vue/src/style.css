@@ -74,6 +74,7 @@ button, input, select, textarea {
 
 .el-input-group__append, .el-input-group__prepend {
     color: var(--el-text-color-primary) !important;
+    background: var(--el-bg-color) !important;
 }
 
 .tox .tox-dialog__iframe.tox-dialog__iframe--opaque {
