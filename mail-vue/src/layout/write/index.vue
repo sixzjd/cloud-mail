@@ -299,15 +299,6 @@ async function sendEmail() {
     return
   }
 
-  if (!form.subject) {
-    ElMessage({
-      message: t('emptySubjectMsg'),
-      type: 'error',
-      plain: true,
-    })
-    return
-  }
-
   if (!form.content) {
     form.content = editor.value.getContent();
   }
